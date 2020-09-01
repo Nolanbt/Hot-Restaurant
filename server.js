@@ -18,45 +18,33 @@ var waitList = [];
 var masterArray = [tables, waitList];
 
 // Routes
-// =============================================================
-
-// Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-    // res.send("Welcome to the Home Page!")
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Display tables link or waitList
+// Display tables link
 app.get("/api/waitlist", function(req, res) {
-    // if (waitList.length === 0) {
-    //     //if no reservations
-    //     return res.json(false);
-    // }
-    return res.json(waitList);
+    res.json(waitList);
 });
 
+// Display wait list link
 app.get("/api/tables", function(req, res) {
-    // if (tables.length === 0) {
-    //     //if no reservations
-    //     return res.json(false);
-    // }
-    return res.json(tables);
+    res.json(tables);
 });
 
 //View Tables 
-// Displays all characters
 app.get("/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
-    // return res.json(masterArray);
+    // send ==> res.json(masterArray);
 });
 
+//make a res
 app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
-    // return res.json(masterArray);
+    // send ==> res.json(masterArray);
 });
 
 // Starts the server to begin listening
-// =============================================================
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
