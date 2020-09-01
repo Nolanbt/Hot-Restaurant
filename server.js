@@ -1,9 +1,9 @@
 //Import
-var express = require("express");
-var path = require("path");
+const express = require("express");
+const path = require("path");
 
 //setting up Express and the PORT
-var app = express();
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 //MiddleWare for POSTing
