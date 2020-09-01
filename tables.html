@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="fa fa-fire"></span> Hot Restaurant</h1>
+      <hr>
+      <h2 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h2>
+      <br>
+
+      <div class="text-center">
+        <a href="/reserve"><button class="btn btn-lg btn-info"><span class="fa fa-credit-card"></span> Make Reservation</button></a>
+        <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+      </div>
+
+    </div>
+    <div class="card">
+          <div class="card-header">
+            <h4>Current Reservations</h4>
+          </div>
+          <div class="card-body">
+            <ul id="tableList" class="list-group"></ul>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card-header">
+            <h4>Waiting List</h4>
+          </div>
+          <div class="card-body">
+            <ul id="waitList" class="list-group"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/clear">Clear table</a> |
+            <a href="/api/tables">Table Link</a> |
+             <a href="/api/waitlist">Wait List</a>
+      </div>
+    </footer>
+
+  </div>
+ 
+
+
+</body>
+</html>
