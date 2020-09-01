@@ -7,7 +7,7 @@ Nolanbt
 ##  Description:
 
     The application will populate two different JSON objects based on user input. The first will be a
-    list of five tables which will populate based on users making reservations.~ Once the five tables
+    list of five tables which will populate based on users making reservations. Once the five tables
     are filled, the second JSON object will be where reservations are saved, which will be a waiting list.
 
 ## Table of Contents:
