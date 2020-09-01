@@ -4,7 +4,7 @@ var path = require("path");
 
 //setting up Express and the PORT
 var app = express();
-var PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //MiddleWare for POSTing
 app.use(express.urlencoded({ extended: true }));
