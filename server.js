@@ -6,7 +6,6 @@ var path = require("path");
 var app = express();
 var PORT = 3000;
 
-
 //MiddleWare for POSTing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,8 +28,10 @@ var waitList = [
         phoneNumber: "Jedi Master",
         id: 900,
         email: 2000
-      }
+    }
 ];
+
+var masterArray = [tables, waitList];
 
 // Routes
 // =============================================================
@@ -41,49 +42,35 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
 // Display tables link or waitList
 app.get("/api/waitlist", function(req, res) {
-    if (waitList.length === 0) {
-        //if no reservations
-        return res.json(false);
-    }
+    // if (waitList.length === 0) {
+    //     //if no reservations
+    //     return res.json(false);
+    // }
     return res.json(waitList);
 });
 
 app.get("/api/tables", function(req, res) {
-    if (tables.length === 0) {
-        //if no reservations
-        return res.json(false);
-    }
+    // if (tables.length === 0) {
+    //     //if no reservations
+    //     return res.json(false);
+    // }
     return res.json(tables);
 });
 
 //View Tables 
 // Displays all characters
 app.get("/tables", function(req, res) {
-    return res.json(tablse, waitList);
+    res.sendFile(path.join(__dirname, "tables.html"));
+    return res.json(masterArray);
 });
 
-// Reserve - takes in JSON input
-app.post("/reserve", function(req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-    var newReservation = req.body;
-    console.log(newReservation);
-  
-    // We then add the json the user sent to the character array
-    if (tables.length < 5) {
-        tables.push(newReservation);    
-    }
-    else {
-        waitList.push(newReservation);
-    }
-
-    // We then display the JSON to the users
-    res.json(newReservation);
+app.get("/reserve", function(req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
+    return res.json(masterArray);
 });
-  
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
