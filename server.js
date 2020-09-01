@@ -11,25 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Table Array and Wait List Array
-var tables = [
-    {
-        routeName: "yoda",
-        name: "Yoda",
-        phoneNumber: "Jedi Master",
-        id: 900,
-        email: 2000
-    }
-];
+var tables = [];
 
-var waitList = [
-    {
-        routeName: "babyyoda",
-        name: "Baby Yoda",
-        phoneNumber: "Jedi Master",
-        id: 900,
-        email: 2000
-    }
-];
+var waitList = [];
 
 var masterArray = [tables, waitList];
 
@@ -63,12 +47,12 @@ app.get("/api/tables", function(req, res) {
 // Displays all characters
 app.get("/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
-    return res.json(masterArray);
+    // return res.json(masterArray);
 });
 
 app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
-    return res.json(masterArray);
+    // return res.json(masterArray);
 });
 
 // Starts the server to begin listening
