@@ -64,7 +64,7 @@
                 uniqueID: $("#uniqueID").val().trim(),
             };
 
-            $.post("/api/tables", customerReserve)
+            $.post("/reserve", customerReserve)
             .then( function (data) {
                 console.log("reserve.html", data);
                 alert("Making reservation.");

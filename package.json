@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "starwars-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server6.js",
-=======
   "name": "hot-restaurant-express",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
->>>>>>> 7b72d4bfa84a7c36ec2fe6c6971cda21f49c292d
   "dependencies": {
     "express": "^4.16.3"
   },
@@ -18,13 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start": "node server6.js",
-    "watch": "nodemon server6.js"
-=======
     "start": "node server.js",
     "watch": "nodemon server.js"
->>>>>>> 7b72d4bfa84a7c36ec2fe6c6971cda21f49c292d
   },
   "author": "",
   "license": "ISC"
