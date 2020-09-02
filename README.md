@@ -18,7 +18,7 @@ Nolanbt
   * [Tests](#tests)
   * [Questions](#questions)
 
-## #Installation:
+## Installation:
     N/a
 
 ## #Usage:
