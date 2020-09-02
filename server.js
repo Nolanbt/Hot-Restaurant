@@ -15,9 +15,8 @@ const tables = [];
 
 const waitList = [];
 
-const masterArray = [tables, waitList];
-
 // Routes
+//===================================================
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -33,19 +32,18 @@ app.get("/api/tables", function (req, res) {
 });
 
 app.get("/api/clear", function(req, res) {
-    res.send("No table for you");
+    tables = [];
+    tables = waitList.splice(0, 5);
 });
-//Nolan - tell buttons to stop looking for reserve.html and tables.html
+
 //View Tables 
 app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
-    // send ==> res.json(masterArray);
 });
 
 //make a res
 app.get("/reserve", function (req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
-    // send ==> res.json(masterArray);
 });
 
 // Create New Characters - takes in JSON input
@@ -62,6 +60,7 @@ app.post("/reserve", function (req, res) {
 });
 
 // Starts the server to begin listening
+// ==============================================
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
