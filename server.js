@@ -32,6 +32,10 @@ app.get("/api/tables", function(req, res) {
     res.json(tables);
 });
 
+app.get("/api/clear", function(req, res) {
+    res.send("No table for you");
+});
+//Nolan - tell buttons to stop looking for reserve.html and tables.html
 //View Tables 
 app.get("/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
@@ -49,13 +53,12 @@ app.post("/reserve", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newReservation = req.body;
-    console.log(newReservation);
   
     // We then add the json the user sent to the character array
     (tables.length < 5) ? tables.push(newReservation) : waitList.push(newReservation);
    
     // We then display the JSON to the users
-    res.json(newReservation);
+    // res.json(newReservation);
 });
 
 // Starts the server to begin listening
