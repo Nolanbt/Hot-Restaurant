@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Table Array and Wait List Array
-var tables = [
+const tables = [
     {
         routeName: "yoda",
         name: "Yoda",
@@ -21,7 +21,7 @@ var tables = [
     }
 ];
 
-var waitList = [
+const waitList = [
     {
         routeName: "babyyoda",
         name: "Baby Yoda",
@@ -31,7 +31,7 @@ var waitList = [
     }
 ];
 
-var masterArray = [tables, waitList];
+const masterArray = [tables, waitList];
 
 // Routes
 // =============================================================
