@@ -53,12 +53,7 @@ app.post("/reserve", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newReservation = req.body;
-<<<<<<< HEAD
   
-=======
-    console.log(newReservation);
-
->>>>>>> a18261a9994e8c7870083435d27997e9036138d0
     // We then add the json the user sent to the character array
     (tables.length < 5) ? tables.push(newReservation) : waitList.push(newReservation);
 
