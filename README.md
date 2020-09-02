@@ -28,8 +28,22 @@ Nolanbt
     N/a
 
 ## #Contributing:
+    Nolan Terpstra
+        GitHub: Nolanbt
+        Link: https://github.com/Nolanbt
+    Christopher Cochran
+        GitHub: chrscchrn
+        Link: https://github.com/chrscchrn
+    Gio Talabong
+        GitHub: giotala
+        Link: https://github.com/giotala
+    Kyle Gribble
+        GitHub: SunWuKong112
+        Link: https://github.com/SunWuKong112
+    Maverick Acampado
+        GitHub: mugen430
+        Link: https://github.com/mugen430
 
-    N/a
 
 ## #Tests:
 
