@@ -4,7 +4,7 @@
 Nolanbt
 [GitHub](https://github.com/Nolanbt/Hot-Restaurant)
 
-##  Description:
+## Description:
 
     The application will populate two different JSON objects based on user input. The first will be a
     list of five tables which will populate based on users making reservations. Once the five tables
@@ -18,24 +18,38 @@ Nolanbt
   * [Tests](#tests)
   * [Questions](#questions)
 
-## #Installation:
+## Installation:
     N/a
 
-## #Usage:
+## Usage:
     N/a
 
-## #Licenses:
+## Licenses:
     N/a
 
-## #Contributing:
+## Contributing:
+    Nolan Terpstra
+        GitHub: Nolanbt
+        Link: https://github.com/Nolanbt
+    Christopher Cochran
+        GitHub: chrscchrn
+        Link: https://github.com/chrscchrn
+    Gio Talabong
+        GitHub: giotala
+        Link: https://github.com/giotala
+    Kyle Gribble
+        GitHub: SunWuKong112
+        Link: https://github.com/SunWuKong112
+    Maverick Acampado
+        GitHub: mugen430
+        Link: https://github.com/mugen430
+
+
+## Tests:
 
     N/a
 
-## #Tests:
-
-    N/a
-
-## #Questions:
+## Questions:
 
     N/a
 

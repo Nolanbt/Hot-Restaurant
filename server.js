@@ -55,8 +55,8 @@ app.post("/reserve", function (req, res) {
     // We then add the json the user sent to the character array
     (tables.length < 5) ? tables.push(newReservation) : waitList.push(newReservation);
 
+    // We then display the JSON to the users
     res.json(newReservation);
-
 });
 
 // Starts the server to begin listening
