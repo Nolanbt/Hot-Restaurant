@@ -49,7 +49,7 @@ Nolanbt
 
     N/a
 
-## #Questions:
+## Questions:
 
     N/a
 
