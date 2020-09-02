@@ -44,6 +44,20 @@ app.get("/reserve", function(req, res) {
     // send ==> res.json(masterArray);
 });
 
+// Create New Characters - takes in JSON input
+app.post("/reserve", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newReservation = req.body;
+    console.log(newReservation);
+  
+    // We then add the json the user sent to the character array
+    (tables.length < 5) ? tables.push(newReservation) : waitList.push(newReservation);
+   
+    // We then display the JSON to the users
+    res.json(newReservation);
+});
+
 // Starts the server to begin listening
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
