@@ -18,47 +18,47 @@ const waitList = [];
 const masterArray = [tables, waitList];
 
 // Routes
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Display tables link
-app.get("/api/waitlist", function(req, res) {
+app.get("/api/waitlist", function (req, res) {
     res.json(waitList);
 });
 
 // Display wait list link
-app.get("/api/tables", function(req, res) {
+app.get("/api/tables", function (req, res) {
     res.json(tables);
 });
 
 //View Tables 
-app.get("/tables", function(req, res) {
+app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
     // send ==> res.json(masterArray);
 });
 
 //make a res
-app.get("/reserve", function(req, res) {
+app.get("/reserve", function (req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
     // send ==> res.json(masterArray);
 });
 
 // Create New Characters - takes in JSON input
-app.post("/reserve", function(req, res) {
+app.post("/reserve", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newReservation = req.body;
     console.log(newReservation);
-  
+
     // We then add the json the user sent to the character array
     (tables.length < 5) ? tables.push(newReservation) : waitList.push(newReservation);
-   
+
     // We then display the JSON to the users
     res.json(newReservation);
 });
 
 // Starts the server to begin listening
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
